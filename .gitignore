@@ -128,4 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-notebooks/cache/
+analysis-examples/cache/
+tech-demos/cache/
