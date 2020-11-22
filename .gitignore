@@ -130,3 +130,5 @@ dmypy.json
 
 analysis-examples/cache/
 tech-demos/cache/
+*.pkl
+*.backup
