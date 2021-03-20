@@ -25,3 +25,4 @@ dependencies:
   - spaghetti
   - esda
   - splot
+  - folium
