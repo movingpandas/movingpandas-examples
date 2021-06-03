@@ -132,3 +132,6 @@ analysis-examples/cache/
 tech-demos/cache/
 *.pkl
 *.backup
+*.json
+*.jpg
+1-tutorials/temp.gpkg
