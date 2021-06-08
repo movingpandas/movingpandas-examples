@@ -135,3 +135,4 @@ tech-demos/cache/
 *.json
 *.jpg
 1-tutorials/temp.gpkg
+2-analysis-examples/osm_traces.gpx
