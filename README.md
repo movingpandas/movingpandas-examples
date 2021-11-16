@@ -1,15 +1,18 @@
-# movingpandas-examples
-
 <img align="right" src="https://anitagraser.github.io/movingpandas/pics/movingpandas.png">
 
+# MovingPandas @ WiM Winter School
 
-You can run these MovingPandas examples on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/main)
+Welcome to the MovingPandas workshop at the [WiM Winter School 2021](https://www.womeninmobility.org/winterschool)!
 
-The main MovingPandas repo is https://github.com/anitagraser/movingpandas
+*For more information, you can find the main MovingPandas repo at https://github.com/anitagraser/movingpandas*
 
-Visit **[movingpandas.org](http://movingpandas.org)** for details! 
+## Hands-on Session
 
-## Installation 
+1. "Ever Given" demo
+2. Step-by-Step tutorials [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/wim-winter-school-2021)
+
+
+## Optional: local installation 
 
 If you want to run these examples on your local machine, use the environment definition file (environment.yml) provided in this repository.
 
