@@ -1,6 +1,6 @@
 # movingpandas-examples
 
-<img align="right" src="https://anitagraser.github.io/movingpandas/pics/movingpandas.png">
+<img align="right" src="https://anitagraser.github.io/movingpandas/assets/img/movingpandas.png">
 
 
 You can run these MovingPandas examples on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/main)
