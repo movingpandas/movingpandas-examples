@@ -1,9 +1,10 @@
-# movingpandas-examples
+# Welcome to the MovingPandas examples repository!
 
 <img align="right" src="https://anitagraser.github.io/movingpandas/assets/img/movingpandas.png">
 
+This repository contains Jupyter notebooks demonstrating MovingPandas features.
 
-You can run these MovingPandas examples on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/main)
+You can run the these notebooks on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/main)
 
 The main MovingPandas repo is https://github.com/anitagraser/movingpandas
 
