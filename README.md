@@ -4,6 +4,8 @@
 
 This repository contains Jupyter notebooks demonstrating MovingPandas features.
 
+👉 **Jump right in with [Example 1: Getting Started](https://github.com/anitagraser/movingpandas-examples/blob/main/1-tutorials/1-getting-started.ipynb)**
+
 You can run the these notebooks on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anitagraser/movingpandas-examples/main)
 
 The main MovingPandas repo is https://github.com/anitagraser/movingpandas
