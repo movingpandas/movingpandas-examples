@@ -34,3 +34,12 @@ If you want to run these examples on your local machine, use the environment def
 1. Launch Jupyter notebooks and navigate to the `movingpandas-examples` directory 
 1. Now you can run the notebooks, experiment with the code and adjust it to your own data
 
+## Generating html exports using nbautoexport
+
+First, you will need to install nbautoexport. Then register nbautoexport to run automatically while using Jupyter Notebook or Jupyter Lab:
+
+1. conda install nbautoexport --channel conda-forge
+1. nbautoexport install
+
+Finally restart the Jupyter server. 
+
