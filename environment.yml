@@ -4,27 +4,28 @@ channels:
   - default
 dependencies:
   - python=3.7
-  - numpy
-  - cython
-  - matplotlib
-  - seaborn
-  - pandas
-  - geopandas
-  - shapely<1.8
-  - rasterio
-  - hvplot
   - bokeh
-  - proj
   - cartopy==0.19.0
-  - geoviews
-  - scikit-learn
+  - cython
+  - esda
+  - folium
+  - geopandas
   - geopy
-  - panel
+  - geoviews
+  - hvplot
+  - jupyterlab
+  - matplotlib
   - movingpandas
   - networkx
+  - numpy
   - osmnx
+  - pandas
+  - panel
+  - proj
+  - rasterio
+  - scikit-learn
+  - seaborn
+  - shapely<1.8
   - spaghetti
-  - esda
   - splot
-  - folium
-  - jupyterlab
+  - stonesoup
