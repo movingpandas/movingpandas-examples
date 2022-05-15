@@ -134,9 +134,11 @@ tech-demos/cache/
 *.backup
 *.json
 *.jpg
+*.png
 *.html
 1-tutorials/temp.gpkg
 2-analysis-examples/osm_traces.gpx
 3-tech-demos/temp.csv
 1-tutorials/.nbautoexport
 2-analysis-examples/.nbautoexport
+2-analysis-examples/liverpool_2019.csv
