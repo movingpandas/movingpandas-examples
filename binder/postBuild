@@ -1,0 +1,2 @@
+panel build panel
+jupyter serverextension enable panel.io.jupyter_server_extension
