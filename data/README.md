@@ -4,6 +4,10 @@
 
 AIS data published by the [Danish Maritime Authority](https://dma.dk/safety-at-sea/navigational-information/ais-data). This AIS sample covers vessel traffic on the 5th July 2017 near Gothenburg.
 
+## boat-positions.csv
+
+AIS data of the EverGiven incident provided by [VesselsValue](https://www.vesselsvalue.com).
+
 ## geolife_sample.gpkg
 
 [GeoLife GPS Trajectories](https://www.microsoft.com/en-us/download/details.aspx?id=52367) collected in (Microsoft Research Asia) Geolife project by 182 users in a period of over three years (from April 2007 to August 2012). 
@@ -29,5 +33,10 @@ Additionally, please cite the Movebank data package:
 ## horse_collar.gpkg
 
 Horse collar tracking data provided by Prof. Lene Fischer (University of Copenhagen) and the Center for Technology & Environment of Guldborgsund Municipality in Denmark 
+
+## icebergs_v5.zip
+
+The consolidated [BYU/NIC iceberg database](https://www.scp.byu.edu/data/iceberg/) is described in the paper J.S. Budge and D.G. Long, "A Comprehensive Database for Antarctic Iceberg Tracking Using Scatterometer Data," IEEE Journal of Selected Topics in Applied Earth Observations, Vol. 11, No. 2, doi:10.1109/JSTARS.2017.2784186, 2017.
+
 
 
