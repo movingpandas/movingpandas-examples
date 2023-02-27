@@ -1,9 +1,8 @@
 name: mpd-ex
 channels:
   - conda-forge
-  - default
 dependencies:
-  - python=3.9
+  - python=3.10
   - bokeh<3.0
   - cartopy
   - cython
