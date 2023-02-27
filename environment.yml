@@ -18,6 +18,7 @@ dependencies:
   - matplotlib
   - movingpandas
   - networkx
+  - numba>=0.56
   - numpy
   - osmnx
   - pandas
