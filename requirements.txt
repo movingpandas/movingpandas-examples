@@ -1,0 +1,10 @@
+movingpandas==0.16.0
+jupyter
+geopandas
+mapclassify
+matplotlib
+numpy
+pandas
+pyproj
+scipy
+shapely
