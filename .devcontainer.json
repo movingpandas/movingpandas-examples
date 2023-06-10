@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/darribas/gds_py",
+    "image": "ghcr.io/movingpandas/movingpandas-examples:binder",
     // "forwardPorts": [3000],
     "customizations": {
       // Configure properties specific to VS Code.
