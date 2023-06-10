@@ -37,8 +37,8 @@
 	// Add conda
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
-	},
-	"postCreateCommand": "conda install -y -c conda-forge movingpandas hvplot geoviews cartopy"
+	}
+	//"postCreateCommand": "conda install -c conda-forge movingpandas hvplot geoviews cartopy --yes"
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
