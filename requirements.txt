@@ -1,6 +1,7 @@
 movingpandas==0.16.0
-jupyter
-geopandas
+hvplot==0.8.3
+geopandas==0.13.0
+geoviews==1.9.6
 mapclassify
 matplotlib
 numpy
@@ -8,3 +9,4 @@ pandas
 pyproj
 scipy
 shapely
+jupyter

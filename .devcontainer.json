@@ -14,7 +14,7 @@
 		"vscode": {
 			"settings": {},
 			"extensions": [
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker", "ms-python.vscode-pylance", "ms-python.python", "ms-toolsai.jupyter"
 			]
 		}
 	},
