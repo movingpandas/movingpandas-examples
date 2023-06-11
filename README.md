@@ -8,6 +8,9 @@ This repository contains Jupyter notebooks demonstrating MovingPandas features.
 
 You can run the these notebooks on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/movingpandas/movingpandas-examples/main)
 
+Alternatively, if you prefer VS Code, you can run Github Codespaces: 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/movingpandas/movingpandas-examples)
+
 The main MovingPandas repo is https://github.com/movingpandas/movingpandas
 
 Visit **[movingpandas.org](http://movingpandas.org)** for details! 
