@@ -15,12 +15,17 @@ This session requires a basic understanding of Python and Git. Furthermore, to b
 
 If you want to run these examples on your local machine, use the environment definition file (environment.yml) provided in this repository.
 
-### Preparation (conda/mamba)
+### Preparation 
+
+Make sure that you have a command line interface that can run GIT and conda/mamba commands: 
 
 1. Install git
 1. Install miniconda: https://conda.io/projects/conda/en/latest/user-guide/install/index.html 
-1. Install mamba: `conda install -c conda-forge mamba` (optional, but recommended because mamba is much faster at solving the dependencies than conda)
-1. Install VSCode: https://code.visualstudio.com/Download (optional, but recommended due to its DVC integration)
+1. Install mamba in the base conda environment: `conda install -c conda-forge mamba` (optional, but recommended because mamba is much faster at solving the dependencies than conda)
+
+And as an IDE, I recommend VSCode due to its GIT and DVC integration
+
+1. Install VSCode: https://code.visualstudio.com/Download 
 
 ### MovingPandas environment
 
@@ -78,6 +83,12 @@ Let's check the status:
 Data and pipelines are up to date.
 ```
 
+Finally, let's commit the initialized DVC setup to git:
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git commit -m "Add dvc"
+```
+
 
 ### Modify the dataset
 
@@ -96,12 +107,43 @@ data\boat-positions.csv.dvc:
                 modified:           data\boat-positions.csv
 ```
 
-Save the changes and let's check the dvc status again: 
+Let's commit our changes to dvc and git:
 
 ```
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc commit
 outputs ['data\\boat-positions.csv'] of stage: 'data\boat-positions.csv.dvc' changed. Are you sure you want to commit it? [y/n] y
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc status
 Data and pipelines are up to date.
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git commit -m "Update header"
 ```
+
+To revert our changes and go back to the previous file version, run:
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git checkout HEAD~1 .\data\boat-positions.csv.dvc
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc checkout
+M       data\boat-positions.csv
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc status
+Data and pipelines are up to date.
+```
+
+When we look at the .csv file now, the header has reverted back to the original.
+
+To return to the latest version with our nice short column names, change `HEAD~1` to `HEAD` and run:
+
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git checkout HEAD .\data\boat-positions.csv.dvc
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc checkout
+M       data\boat-positions.csv
+```
+
+To find the correct version of a file, we can have a look at the git commit log: 
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git log --oneline
+ab17c8f (HEAD -> opengeohub2023) Update header
+207a496 Add dvc
+```
+
+You may also use the hash (e.g. `207a496` instead of `HEAD~1`) to access a specific commit directly. 
+
 
