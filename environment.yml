@@ -11,7 +11,7 @@ dependencies:
   - geopandas
   - geopy
   - geoviews
-  - hvplot
+  - hvplot=0.8.3
   - jinja2<3.1
   - jupyterlab
   - matplotlib
