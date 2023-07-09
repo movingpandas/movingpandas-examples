@@ -32,8 +32,76 @@ If you want to run these examples on your local machine, use the environment def
 
 ## Getting started
 
+### Initialize DVC 
+
+In the ``0-opengeohub-session\start`` directory, run:
+
 ```
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc init --subdir
 Initialized DVC repository.
+```
+
+This will create a ``.dvc`` directory and a ``.dvcignore`` file.
+
+
+### Download a dataset
+
+```
+dvc get https://github.com/movingpandas/movingpandas-examples data/boat-positions.csv -o data\boat-positions.csv
+```
+
+### Start tracking the dataset
+
+Let's track the ``data\boat-positions.csv`` file: 
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc add .\data\boat-positions.csv
+100% Adding...|██████████████████████████████████████████████████████████████████████████████████████████████████████████|1/1 [00:00,  4.29file/s]
+```
+
+To track the changes with git, run:
+
+```
+git add 'data\.gitignore' 'data\boat-positions.csv.dvc'
+```
+
+To enable auto staging, run:
+
+```
+dvc config core.autostage true
+```
+
+Let's check the status:
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc status
+Data and pipelines are up to date.
+```
+
+
+### Modify the dataset
+
+Let's clean up the column names. Change the header in ``data\boat-positions.csv`` to 
+
+```
+id,t,lon,lat
+```
+
+Save the changes and let's check the dvc status again: 
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc status
+data\boat-positions.csv.dvc:
+        changed outs:
+                modified:           data\boat-positions.csv
+```
+
+Save the changes and let's check the dvc status again: 
+
+```
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc commit
+outputs ['data\\boat-positions.csv'] of stage: 'data\boat-positions.csv.dvc' changed. Are you sure you want to commit it? [y/n] y
+(mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc status
+Data and pipelines are up to date.
 ```
 
