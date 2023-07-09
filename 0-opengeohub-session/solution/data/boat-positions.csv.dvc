@@ -1,0 +1,5 @@
+outs:
+- md5: 75e9226fa8fbbe86bbd99e74c4470143
+  size: 874850
+  hash: md5
+  path: boat-positions.csv
