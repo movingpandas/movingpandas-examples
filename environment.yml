@@ -1,4 +1,4 @@
-name: mpd-ex
+name: mpd-opengeohub2023
 channels:
   - conda-forge
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
   - bokeh<3.0
   - cartopy
   - cython
+  - dvc>=3.0
   - esda
   - folium
   - geopandas
@@ -15,7 +16,7 @@ dependencies:
   - jinja2<3.1
   - jupyterlab
   - matplotlib
-  - movingpandas
+  - movingpandas>=0.16.1
   - networkx
   - numpy
   - osmnx
