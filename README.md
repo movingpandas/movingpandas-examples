@@ -9,7 +9,8 @@ The main MovingPandas website is **[movingpandas.org](http://movingpandas.org)**
 This session requires a basic understanding of Python and Git. Furthermore, to be prepared, please check out the following introductory materials:
 
 1. [DVC](dvc.org/) intro https://youtu.be/kLKBcPonMYw 
-1. [GeoPandas](https://geopandas.org) intro https://geopandas.org/en/stable/getting_started/introduction.html 
+1. [GeoPandas](https://geopandas.org) intro https://geopandas.org/en/stable/getting_started/introduction.html
+2. [MovingPandas](http://movingpandas.org) intro https://youtu.be/qeLQfnpJV1g
 
 ## Installation 
 
