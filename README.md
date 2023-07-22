@@ -117,6 +117,8 @@ Data and pipelines are up to date.
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git commit -m "Update header"
 ```
 
+### Undoing changes 
+
 To revert our changes and go back to the previous file version, run:
 
 ```
@@ -131,6 +133,7 @@ When we look at the .csv file now, the header has reverted back to the original.
 
 To return to the latest version with our nice short column names, change `HEAD~1` to `HEAD` and run:
 
+```
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> git checkout HEAD .\data\boat-positions.csv.dvc
 (mpd-opengeohub2023) PS D:\Documents\GitHub\movingpandas-examples\0-opengeohub-session\solution> dvc checkout
 M       data\boat-positions.csv
