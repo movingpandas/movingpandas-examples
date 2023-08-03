@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  stop-extraction:
+    cmd: python extract-stops.py
+    deps:
+    - path: data/boat-positions.csv
+      hash: md5
+      md5: 05f1702772b1e7c3a1f854a7a67c01b6
+      size: 852535
+    - path: extract-stops.py
+      hash: md5
+      md5: 2425d8dd855a7ff505c62c831cba3817
+      size: 764
+    outs:
+    - path: stops.geojson
+      hash: md5
+      md5: 0da412c1e607a2cbf62ca71e2963019e
+      size: 83140

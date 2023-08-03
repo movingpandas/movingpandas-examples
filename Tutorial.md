@@ -2,19 +2,30 @@
 
 <img align="right" src="https://movingpandas.github.io/movingpandas/assets/img/movingpandas.png">
 
-The main MovingPandas website is **[movingpandas.org](http://movingpandas.org)**
+[OpenGeoHub Summer School 2023 - Session: Data engineering for Mobility Data Science (with Python and DVC)](
+https://pretalx.earthmonitor.org/opengeohub-summer-school-2023/talk/YKZKSA/)
+
+This tutorial relies heavily on [DVC](http://dvc.org) and [MovingPandas](http://movingpandas.org).
 
 
 ## Setup 
 
-Make sure to follow the instructions in the [README.md](README.md)
+Make sure to follow the instructions in the [README.md](README.md) to set up your Python environment. 
+
+This tutorial consists of two main parts: 
+
+1. Tracking datasets with DVC
+1. Tracking analysis workflows with DVC pipelines
 
 
-## Getting started
+## Tracking datasets
 
-### Initialize DVC 
+In this first part, we will initialize DVC and configure it to keep track of our mobilty dataset. 
 
-In the ``0-opengeohub-session\start`` directory, run:
+
+### Initializing DVC 
+
+To initialize DVC in the ``0-opengeohub-session\start`` directory, run:
 
 ```
 dvc init --subdir
@@ -29,7 +40,9 @@ You can now commit the changes to git.
 ```
 
 
-### Download a dataset
+### Downloading a dataset
+
+Next, we will download our tutorial dataset, a CSV file containing boat locations: 
 
 ```
 dvc get https://github.com/movingpandas/movingpandas-examples data/boat-positions.csv -o data\boat-positions.csv
@@ -43,7 +56,7 @@ Let's track the ``data\boat-positions.csv`` file:
 dvc add .\data\boat-positions.csv
 ```
 
-To track the changes with git, run:
+To track the changes with GIT, run:
 
 ```
 git add 'data\.gitignore' 'data\boat-positions.csv.dvc'
@@ -67,13 +80,13 @@ This should output:
 Data and pipelines are up to date.
 ```
 
-Finally, let's commit the initialized DVC setup to git:
+Finally, let's commit the initialized DVC setup to GIT:
 
 ```
 git commit -m "Add dvc"
 ```
 
-As a confirmation, this will display the new dvc configuration files, including the `boat-positions.csv.dvc` which is the placeholder for our dataset. Instead of pushing the whole dataset to the git repo, only the placeholder is include. This ensures that the git repo is not flooded with (potentially huge) datasets: 
+As a confirmation, this will display the new DVC configuration files, including the `boat-positions.csv.dvc` which is the placeholder for our dataset. Instead of pushing the whole dataset to the GIT repo, only the placeholder is included. This ensures that the GIT repo is not flooded with (potentially huge) datasets: 
 
 ```
 [opengeohub2023 a59662e] Add dvc
@@ -87,7 +100,7 @@ As a confirmation, this will display the new dvc configuration files, including 
 
 
 
-### Modify the dataset
+### Handling dataset modifications
 
 Let's clean up the column names. Change the header in ``data\boat-positions.csv`` to 
 
@@ -95,7 +108,7 @@ Let's clean up the column names. Change the header in ``data\boat-positions.csv`
 id,t,lon,lat
 ```
 
-Save the changes and let's check the dvc status again: 
+Save the changes and let's check the DVC status again: 
 
 ```
 dvc status
@@ -108,7 +121,7 @@ data\boat-positions.csv.dvc:
                 modified:           data\boat-positions.csv
 ```
 
-Let's commit our changes to dvc:
+Let's commit our changes to DVC:
 
 ```
 dvc commit
@@ -120,7 +133,7 @@ This will as for our confirmation
 outputs ['data\\boat-positions.csv'] of stage: 'data\boat-positions.csv.dvc' changed. Are you sure you want to commit it? [y/n] 
 ```
 
-When we check the dvc status again:
+When we check the DVC status again:
 
 ```
 dvc status
@@ -132,7 +145,7 @@ We now get:
 Data and pipelines are up to date.
 ```
 
-Next, let's check the git status:
+Next, let's check the GIT status:
 
 ```
 git status
@@ -144,7 +157,7 @@ If ``data\boat-positions.csv.dvc`` hasn't been staged for commit automatically, 
 git add .\data\boat-positions.csv.dvc
 ```
 
-Then we can commit the new ``data\boat-positions.csv.dvc`` to git:
+Then we can commit the new ``data\boat-positions.csv.dvc`` to GIT:
 
 ```
 git commit -m "Update header"
@@ -159,13 +172,13 @@ git checkout HEAD~1 .\data\boat-positions.csv.dvc
 dvc checkout
 ```
 
-Which will show that the csv file has been modified:
+Which will show that the CSV file has been modified:
 
 ```
 M       data\boat-positions.csv
 ```
 
-Checking the dvc status:
+Checking the DVC status:
 
 ```
 dvc status
@@ -177,7 +190,7 @@ Shows:
 Data and pipelines are up to date.
 ```
 
-When we look at the .csv file now, the header has reverted back to the original.
+When we look at the CSV file now, the header has reverted back to the original.
 
 To return to the latest version with our nice short column names, change `HEAD~1` to `HEAD` and run:
 
@@ -186,13 +199,13 @@ git checkout HEAD .\data\boat-positions.csv.dvc
 dvc checkout
 ```
 
-Which will again confirm that the csv has been changed:
+Which will again confirm that the CSV has been changed:
 
 ```
 M       data\boat-positions.csv
 ```
 
-To find the correct version of a file, we can have a look at the git commit log: 
+To find the correct version of a file, we can have a look at the GIT commit log: 
 
 ```
 git log --oneline
@@ -210,9 +223,11 @@ You may also use the hash (e.g. `207a496` instead of `HEAD~1`) to access a speci
 
 ## Setting up a data pipeline
 
-Next, we set up a DVC data pipeline. 
+For this tutorial, we will implement a stop extraction analysis using MovingPandas. For the development of this analysis from scratch, head over to `solution/notebook.ipynb`.
 
-First, we need a script that does something with our dataset: 
+After we have decided how our analysis should  work, we can automate it and track it using a DVC data pipeline. 
+
+To do so, first, we need a script that implements the data processing: 
 
 
 ### Creating a first analysis script
@@ -276,7 +291,7 @@ SUCCESS! Created output stops.geojson
 
 ### Configuring our first pipeline stage
 
-Now, we can configure dvc to run our script. To do that, we create a DVC stage with the name `stop-extraction` that uses our Python script and the csv data to create the stop.geojson: 
+Now, we can configure DVC to run our script. To do that, we create a DVC stage with the name `stop-extraction` that uses our Python script and the CSV data to create the stop.geojson: 
 
 ```
 dvc stage add -n stop-extraction -d extract-stops.py -d data/boat-positions.csv -o stops.geojson python extract-stops.py
@@ -353,7 +368,7 @@ Data and pipelines are up to date.
 
 This means that DVC knows that neither the input data nor the analysis script changed and, therefore, it is not necessary to re-run the stage. 
 
-When we run `git status`, we see changes to dvc config and we are notified that we still need to add extract-stops.py:
+When we run `git status`, we see changes to DVC files and we are notified that we still need to add extract-stops.py to GIT:
 
 ```
 On branch opengeohub2023-wip
@@ -405,7 +420,7 @@ Updating lock file 'dvc.lock'
 Use `dvc push` to send your updates to remote storage.
 ```
 
-Again, let's commit our changes to git:
+Again, let's commit our changes to GIT:
 
 ```
 git add extract-stops.py
@@ -416,7 +431,7 @@ git commit -m "Remov print"
 ### Making changes to the input data
 
 
-If we make a change to the csv file, ``dvc status`` will tell us: 
+If we make a change to the CSV file, ``dvc status`` will tell us: 
 
 ```
 stop-extraction:
@@ -443,7 +458,7 @@ Updating lock file 'dvc.lock'
 Use `dvc push` to send your updates to remote storage.
 ```
 
-And ``git status`` will show us that the lock file and the csv placeholder have been changed:
+And ``git status`` will show us that the lock file and the CSV placeholder have been changed:
 
 ```
 On branch opengeohub2023-wip
@@ -459,7 +474,7 @@ Let's commit this:
 git commit -m "Data change"
 ```
 
-Our git log now looks somting like this:
+Our GIT log now looks somting like this:
 
 ```
 git log --oneline
@@ -473,7 +488,7 @@ e3148a2 Update header
 
 ### Reverting changes
 
-If we now decide to revert the changes in our csv file and run ``dvc repro`` again, we get:
+If we now decide to revert the changes in our CSV file and run ``dvc repro`` again, we get:
 
 ```
 Verifying data sources in stage: 'data\boat-positions.csv.dvc'

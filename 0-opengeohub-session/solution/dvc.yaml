@@ -1,0 +1,8 @@
+stages:
+  stop-extraction:
+    cmd: python extract-stops.py
+    deps:
+    - data/boat-positions.csv
+    - extract-stops.py
+    outs:
+    - stops.geojson
