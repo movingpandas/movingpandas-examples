@@ -7,16 +7,16 @@ https://pretalx.earthmonitor.org/opengeohub-summer-school-2023/talk/YKZKSA/)
 
 This tutorial relies heavily on [DVC](http://dvc.org) and [MovingPandas](http://movingpandas.org).
 
+ 
+This tutorial consists of three main parts: 
+
+1. [Tracking a dataset with DVC](#tracking-datasets)
+1. [Implementing a MovingPandas analysis](#setting-up-a-data-pipeline)
+1. [Tracking our analysis workflow with a DVC pipeline](#creating-a-first-analysis-script)
 
 ## Setup 
 
-Make sure to follow the instructions in the [README.md](README.md) to set up your Python environment. 
-
-This tutorial consists of two main parts: 
-
-1. Tracking datasets with DVC
-1. Tracking analysis workflows with DVC pipelines
-
+Make sure to follow the instructions in the [README.md](README.md) to set up your Python environment.
 
 ## Tracking datasets
 
@@ -223,7 +223,7 @@ You may also use the hash (e.g. `207a496` instead of `HEAD~1`) to access a speci
 
 ## Setting up a data pipeline
 
-For this tutorial, we will implement a stop extraction analysis using MovingPandas. For the development of this analysis from scratch, head over to `solution/notebook.ipynb`.
+For this tutorial, we will implement a stop extraction analysis using MovingPandas. For the development of this analysis from scratch, head over to [solution/notebook.ipynb](0-opengeohub-session/solution/notebook.ipynb).
 
 After we have decided how our analysis should  work, we can automate it and track it using a DVC data pipeline. 
 
