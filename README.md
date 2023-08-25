@@ -34,3 +34,7 @@ And as an IDE, I recommend VSCode due to its GIT and DVC integration
 1. Switch to the opengeohub2023 branch: `git checkout opengeohub2023`
 1. Create the environment: `mamba env create -f environment.yml` (or `conda env create -f environment.yml` if you didn't install mamba)
 1. Activate the environment: `conda activate mpd-opengeohub2023`
+
+## Acknowledgements
+
+Work on the tools and workflows presented in this session is partially funded by the  EU's Horizon Europe research and innovation program under Grant No. 101070279 MobiSpaces and No. 101093051 EMERALDS.
