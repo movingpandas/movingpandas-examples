@@ -56,16 +56,16 @@ Let's track the ``data\boat-positions.csv`` file:
 dvc add .\data\boat-positions.csv
 ```
 
-To track the changes with GIT, run:
-
-```
-git add 'data\.gitignore' 'data\boat-positions.csv.dvc'
-```
-
-To enable auto staging, run:
+To enable [auto staging](https://dvc.org/doc/user-guide/project-structure/configuration#core), run:
 
 ```
 dvc config core.autostage true
+```
+
+To track the changes with GIT, run:
+
+```
+git add 'data\.gitignore' 'data\boat-positions.csv.dvc' '.dvc\config'
 ```
 
 Let's check the status:
