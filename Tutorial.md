@@ -426,7 +426,7 @@ Again, let's commit our changes to GIT:
 
 ```
 git add extract-stops.py
-git commit -m "Remov print"
+git commit -m "Remove print"
 ```
 
 
