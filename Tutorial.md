@@ -238,6 +238,8 @@ Let's create a small analysis script called ``extract-stops.py`` that extracts s
 import pandas as pd 
 import movingpandas as mpd
 from datetime import timedelta
+import warnings
+warnings.filterwarnings('ignore')
 
 def run():
     print("Reading data ...")
