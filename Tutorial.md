@@ -151,7 +151,7 @@ Next, let's check the GIT status:
 git status
 ```
 
-If ``data\boat-positions.csv.dvc`` hasn't been staged for commit automatically, add it manually:
+Since the status shows that ``data\boat-positions.csv.dvc`` has changed, we should git add it: 
 
 ```
 git add .\data\boat-positions.csv.dvc
