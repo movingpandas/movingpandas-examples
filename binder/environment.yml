@@ -12,6 +12,7 @@ dependencies:
   - geopy
   - geoviews
   - hvplot
+  - jinja2
   - jupyterlab
   - matplotlib
   - movingpandas
