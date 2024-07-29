@@ -6,9 +6,7 @@ dependencies:
   - pip
   - geojson
   - geopandas
-  - geoviews
   - jupyter_client<8
-  - movingpandas
   - notebook
   - pandas
   - pyshp
