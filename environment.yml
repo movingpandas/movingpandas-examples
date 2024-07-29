@@ -11,5 +11,5 @@ dependencies:
   - ipykernel
   - pip:
       - movingpandas
-      - hvplot
       - geoviews
+      - hvplot
