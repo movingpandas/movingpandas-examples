@@ -1,7 +1,0 @@
-#!/bin/bash
-export BOKEH_ALLOW_WS_ORIGIN=*
-sleep 3
-jupyter trust 1-tutorials/*.ipynb
-jupyter trust 2-analysis-examples/*.ipynb
-jupyter trust 3-tech-demos/*.ipynb
-exec "$@"

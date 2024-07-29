@@ -1,7 +1,0 @@
-name: mpd-ex
-channels:
-  - conda-forge
-dependencies:
-  - python=3.10
-  - jupyterlab
-  - movingpandas
