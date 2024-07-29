@@ -13,3 +13,4 @@ dependencies:
   - ipykernel
   - pip:
       - bokeh==3.5
+      - movingpandas
