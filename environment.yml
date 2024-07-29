@@ -2,30 +2,18 @@ name: mpd-ex
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
-  - bokeh
-  - cartopy
-  - cython
-  - esda
-  - folium
+  - python>=3.12
+  - pip
+  - geojson
   - geopandas
-  - geopy
   - geoviews
-  - hvplot
-  - jinja2
-  - jupyterlab
-  - matplotlib
+  - jupyter_client<8
   - movingpandas
-  - networkx
-  - numpy
-  - osmnx
+  - notebook
   - pandas
-  - panel
-  - proj
-  - rasterio
-  - scikit-learn
-  - seaborn
-  - shapely
-  - spaghetti
-  - splot
-  - stonesoup
+  - pyshp
+  - ipykernel
+  - pip:
+      - bokeh==3.5
+      - bokeh_sampledata
+      
