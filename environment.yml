@@ -4,7 +4,6 @@ channels:
 dependencies:
   - python>=3.12
   - pip
-  - geopandas
   - jupyter_client<8
   - notebook
   - pandas
@@ -13,3 +12,4 @@ dependencies:
       - movingpandas
       - geoviews
       - hvplot
+      - geopandas==1.0.1
