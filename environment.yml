@@ -3,13 +3,13 @@ channels:
   - conda-forge
 dependencies:
   - python>=3.12
-  - pip
-  - geopandas
-  - jupyter_client<8
   - notebook
-  - pandas
   - ipykernel
-  - pip:
-      - movingpandas
-      - geoviews
-      - hvplot
+  - jupyter_client<8
+  - pandas
+  - geopandas
+  - movingpandas
+  - geoviews
+  - hvplot
+  - h3-py
+  - stonesoup
