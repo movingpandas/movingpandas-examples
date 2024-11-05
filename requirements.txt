@@ -1,4 +1,4 @@
-movingpandas==0.16.0
+movingpandas
 jupyter
 geopandas
 mapclassify
