@@ -2,7 +2,7 @@ name: mpd-ex
 channels:
   - conda-forge
 dependencies:
-  - python>=3.12
+  - python=3.10
   - notebook
   - ipykernel
   - jupyter_client<8
@@ -13,3 +13,4 @@ dependencies:
   - hvplot
   - h3-py
   - stonesoup
+  - numpy=1.23.1
