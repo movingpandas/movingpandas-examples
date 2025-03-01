@@ -10,7 +10,7 @@ This repository contains Jupyter notebooks demonstrating MovingPandas features.
 
 <img align="right" src="https://movingpandas.github.io/movingpandas/assets/img/movingpandas.png"  width="200">
 
-👉 **Jump right in with [Example 1: Getting Started](https://github.com/movingpandas/movingpandas-examples/blob/main/1-tutorials/1-getting-started.ipynb)**
+👉 **Jump right in with [Example 1: Getting Started](https://movingpandas.github.io/movingpandas-website/1-tutorials/1-getting-started.html)**
 
 You can run the these notebooks on MyBinder - no installation required: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/movingpandas/movingpandas-examples/main)
 
