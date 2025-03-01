@@ -1,8 +1,14 @@
 # Welcome to the MovingPandas examples repository!
 
-<img align="right" src="https://movingpandas.github.io/movingpandas/assets/img/movingpandas.png">
+<a href="__add_your_repository_url_here__">
+    <img alt="Get it on Codeberg" src="https://get-it-on.codeberg.org/get-it-on-blue-on-white.png" height="60" align="right">
+</a>
+
+[![Issue Tracker](https://img.shields.io/badge/Issue_tracker-Codeberg-blue.svg)](https://codeberg.org/movingpandas/movingpandas-examples/issues) 
 
 This repository contains Jupyter notebooks demonstrating MovingPandas features.
+
+<img align="right" src="https://movingpandas.github.io/movingpandas/assets/img/movingpandas.png"  width="200">
 
 👉 **Jump right in with [Example 1: Getting Started](https://github.com/movingpandas/movingpandas-examples/blob/main/1-tutorials/1-getting-started.ipynb)**
 
