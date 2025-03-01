@@ -1,0 +1,24 @@
+# Sync repo to the Codeberg Forgejo mirror
+name: Repo sync (GitHub -> Codeberg)
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  sync-repo-to-forgejo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Sync repo"
+        uses: spyoungtech/mirror-action@master
+        with:
+          REMOTE: 'https://codeberg.org/movingpandas/movingpandas-examples.git'
+          GIT_USERNAME: anitagraser
+          GIT_PASSWORD: ${{ secrets._CODEBERG_TOKEN }}     
