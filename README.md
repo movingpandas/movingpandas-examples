@@ -1,6 +1,6 @@
 # Welcome to the MovingPandas examples repository!
 
-<a href="__add_your_repository_url_here__">
+<a href="https://codeberg.org/movingpandas/movingpandas-examples">
     <img alt="Get it on Codeberg" src="https://get-it-on.codeberg.org/get-it-on-blue-on-white.png" height="60" align="right">
 </a>
 
