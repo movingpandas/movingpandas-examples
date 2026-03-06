@@ -41,3 +41,13 @@ The consolidated [BYU/NIC iceberg database](https://www.scp.byu.edu/data/iceberg
 ## 2021-01-30_all.zip
 
 Data from [Delhi Pollution Dataset](http://cse.iitd.ac.in/pollutiondata/delhi), published by the Department of Computer Science and Engineering, Indian Institute of Technology Delhi.
+
+## liverpool_bus/route14_outbound.csv
+
+Real-time GPS trajectories from UK Bus Open Data Service (BODS) collected on January 26, 2026. The dataset captures a single bus (vehicle ID: 4716) operating Route 14 outbound service from Queen Square Bus Station to Petherick Road in Liverpool, operated by Arriva Merseyside.
+
+The data includes 1,533 GPS position records collected over 2-3 hours during afternoon/evening operations, demonstrating typical public transport trajectory patterns including complete trips and partial trips representing real-world data collection windows. GPS positions are recorded in WGS84 coordinate system (EPSG:4326).
+
+Fields: vehicle_id, trip_id, timestamp (UTC), latitude, longitude, bearing, origin, destination, route_name, direction, operator.
+
+Data source: [UK Bus Open Data Service](https://data.bus-data.dft.gov.uk/) - Crown copyright, available under Open Government Licence.
