@@ -132,7 +132,6 @@ analysis-examples/cache/
 tech-demos/cache/
 *.pkl
 *.backup
-*.json
 *.jpg
 *.png
 *.html
