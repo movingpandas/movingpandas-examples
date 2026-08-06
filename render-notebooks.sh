@@ -9,7 +9,7 @@ done
 
 # Point relative notebook links at the generated HTML pages while preserving
 # external links to source notebooks and Binder.
-python rewrite-notebook-links.py ./html-output
+python3 rewrite-notebook-links.py ./html-output
 
 
 
