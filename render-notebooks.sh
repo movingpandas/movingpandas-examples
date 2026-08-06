@@ -7,6 +7,10 @@ for nb in **/*.ipynb; do
     --ExecutePreprocessor.timeout=600
 done
 
+# Point relative notebook links at the generated HTML pages while preserving
+# external links to source notebooks and Binder.
+python rewrite-notebook-links.py ./html-output
+
 
 
 # jupyter nbconvert --to html --execute "12-ogc-moving-features.ipynb" --output-dir ./html-output --ExecutePreprocessor.timeout=600
